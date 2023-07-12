@@ -47,7 +47,7 @@ export default function App() {
         <Stack.Screen name="ForgotPassword_ChoosePassword" component={ForgotPassword_ChoosePassword} />
         <Stack.Screen name="ForgotPassword_AccountRecovered" component={ForgotPassword_AccountRecovered} />
       
-        <Stack.Screen name='Mainpage' component={Mainpage}/>
+        <Stack.Screen name='MainPage' component={Mainpage}/>
       
       </Stack.Navigator>
     </NavigationContainer>
