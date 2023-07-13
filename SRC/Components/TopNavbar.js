@@ -46,6 +46,6 @@ const styles = StyleSheet.create({
         top: 0,
         zIndex: 100,
         backgroundColor: "#111111",
-
+        alignSelf:'center',
     }
 })

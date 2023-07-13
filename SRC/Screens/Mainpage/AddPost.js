@@ -27,13 +27,13 @@ const AddPost = ({ navigation }) => {
         // console.log(result)
 
 
-        if (!result.cancelled) {
-            const source = { uri: result.uri };
+        if (!result.canceled) {
+            const source = { uri: result.assets[0].uri };
 
 
-            const response = await fetch(result.uri);
+            const response = await fetch(result.assets[0].uri);
             const blob = await response.blob();
-            const filename = result.uri.substring(result.uri);
+            const filename = result.assets[0].uri.substring(result.assets[0].uri);
 
             const ref = firebase.storage().ref().child(filename);
             const snapshot = await ref.put(blob);

@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
     container: {
         width: '100%',
         height: '100%',
-        backgroundColor: 'black',
+        backgroundColor: 'rgba(219, 174, 197, 0.8)',
         paddingVertical: 50,
     },
     c1: {
