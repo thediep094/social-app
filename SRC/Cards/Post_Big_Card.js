@@ -10,6 +10,7 @@ const Post_Big_Card = (
         username,
         likes,
         comments,
+        post_description,
     }
 ) => {
 
@@ -24,6 +25,9 @@ const Post_Big_Card = (
             <View style={styles.c1}>
                 <Image source={{ uri: profile_image }} style={styles.profilepic} />
                 <Text style={styles.username}>{username}</Text>
+            </View>
+            <View style={styles.descriptionContainer}>
+              <Text style={styles.description}>{post_description}</Text>
             </View>
             <Image source={{ uri: post_pic }} style={styles.image} />
 
@@ -162,6 +166,14 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         marginVertical: 3,
-    }
+    },
+    descriptionContainer: {
+      backgroundColor: 'black',
+      padding: 10,
+    },
+    description: {
+    color: 'white',
+    fontSize: 17,
+    },
 
 })

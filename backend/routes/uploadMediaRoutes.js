@@ -62,6 +62,7 @@ router.get('/getposts', (req, res) => {
             username: user.username,
             profile_image: user.profilepic,
             post_pic: post.post,
+            postdescription: post.postdescription,
             likes: post.likes,
             comments: post.comments
           }));
@@ -75,6 +76,5 @@ router.get('/getposts', (req, res) => {
   });
   
   
-
-
+  
 module.exports = router;
