@@ -11,7 +11,6 @@ const messageRoutes = require('./routes/messageRoutes');
 //requireToken skipped
 
 
-//.......18
 const { createServer } = require("http");
 const { Server } = require("socket.io");
 
@@ -34,8 +33,7 @@ app.get('/', (req, res) => {
 })
 
 
-//...........18
-
+//
 io.on("connection", (socket) => {
 
     console.log("USER CONNECTED - ", socket.id);
@@ -64,6 +62,3 @@ app.listen(port, () => {
 })
 
 
-
-// 6353f0c6a52cde6dafae64d2634c1d60f09a4f3ff40be517
-// 6353f0c6a52cde6dafae64d2634c1d60f09a4f3ff40be517

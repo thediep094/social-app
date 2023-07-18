@@ -53,5 +53,28 @@ router.post('/addpost', (req, res) => {
         })
 })
 
+router.get('/getposts', (req, res) => {
+    User.find()
+      .select('username profilepic posts')
+      .then(users => {
+        const posts = users.flatMap(user => {
+          return user.posts.map(post => ({
+            username: user.username,
+            profile_image: user.profilepic,
+            post_pic: post.post,
+            likes: post.likes,
+            comments: post.comments
+          }));
+        });
+        res.json(posts);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json({ error: "Internal Server Error" });
+      });
+  });
+  
+  
+
 
 module.exports = router;
