@@ -5,9 +5,11 @@ const bodyParser = require('body-parser');
 require('./db');
 require('./models/User');
 require('./models/Message');
+require('./models/Post')
 const authRoutes = require('./routes/authRoutes');
 const uploadMediaRoutes = require('./routes/uploadMediaRoutes');
 const messageRoutes = require('./routes/messageRoutes');
+const postRoutes = require('./routes/postRoutes')
 //requireToken skipped
 
 
@@ -27,7 +29,7 @@ app.use(bodyParser.json());
 app.use(authRoutes);
 app.use(uploadMediaRoutes);
 app.use(messageRoutes);
-
+app.use(postRoutes);
 app.get('/', (req, res) => {
     res.send("Hello World");
 })
