@@ -64,9 +64,10 @@ router.put("/likepost", async (req, res) => {
       .json({ error: "Something went wrong", details: error.message });
   }
 });
-
+console.log("Abc");
 // Unlike post
 router.put("/unlikepost", async (req, res) => {
+  console.log("abcs");
   const { postId, userId } = req.body;
 
   try {

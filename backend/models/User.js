@@ -21,7 +21,7 @@ const userSchema = Schema({
     // required: true
   },
 });
-
+console.log("abc");
 userSchema.pre("save", async function (next) {
   const user = this;
   console.log("Just before saving before hashing  ", user.password);
